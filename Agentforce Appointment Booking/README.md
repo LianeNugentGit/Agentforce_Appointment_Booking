@@ -1,7 +1,7 @@
 Implementor’s Guide
 Disclaimer
 Thank you for your interest in our unmanaged package. Please be advised of the following important information:
-1. No Offi cial Support from Salesforce or this publisher: This package is provided as-is and is not offi cially supported by Salesforce. Any issues or questions related to this package should be directed to the community.
+1. No Official Support from Salesforce or this publisher: This package is provided as-is and is not offi cially supported by Salesforce. Any issues or questions related to this package should be directed to the community.
 2. Open Source Nature: This package is off ered as an open-source solution. You are free to use, modify, and distribute it in accordance with the terms of the applicable open-source license.
 3. Use at Your Own Risk: While we have made every eff ort to ensure the quality and functionality of this package, it is provided without any warranties or guarantees. Users assume all risks associated with its use.
 4. No Liability: The creators of this package, as well as Salesforce, shall not be held liable for any damages or losses arising from the use of this package.

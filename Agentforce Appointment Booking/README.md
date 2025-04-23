@@ -1,5 +1,7 @@
 Implementor’s Guide
+
 Disclaimer
+
 Thank you for your interest in our unmanaged package. Please be advised of the following important information:
 1. No Official Support from Salesforce or this publisher: This package is provided as-is and is not offi cially supported by Salesforce. Any issues or questions related to this package should be directed to the community.
 2. Open Source Nature: This package is off ered as an open-source solution. You are free to use, modify, and distribute it in accordance with the terms of the applicable open-source license.
@@ -10,14 +12,11 @@ Thank you for your interest in our unmanaged package. Please be advised of the f
 7. Ethical Use: Users are expected to use this package ethically and in compliance with all applicable laws and regulations. Misuse of this package, including but not limited to unauthorized distribution or malicious use, is strictly prohibited.
 By using this package, you acknowledge and agree to the terms outlined in this disclaimer. Thank you for your understanding and cooperation.
 
-Implementor’s Guide
-Appointment Booking Custom Agent for Field Service
-Implementor’s Guide
-Developed:
-Feb 13, 2025
 
-Implementor’s Guide
-Overview
+Appointment Booking Custom Agent for Field Service
+Developed: Feb 13, 2025
+
+**Overview**
 Unlock Efficient Appointment Booking with the Salesforce Field Service Custom Agent
 This comprehensive guide empowers you to seamlessly implement the AI-powered Salesforce Field Service Appointment Booking Custom Agent. Developed by a cross-functional team of experts, this tool gives you the power of Autonomous Agent to your field service customers. Leverage the insights and best practices within this guide to effortlessly deploy and customise the agent, maximising the efficiency of your appointment booking process. The Salesforce Field Service Appointment Booking Custom Agent revolutionises field service operations by automating the appointment booking process.
 By autonomously handling appointment bookings, the Custom Agent frees up valuable time for field service teams, allowing them to focus on delivering exceptional service.

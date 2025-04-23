@@ -1,0 +1,21 @@
+{
+  "required" : [ "Messaging_Session_Id", "Service_Appointment_ID" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "Messaging_Session_Id" : {
+      "title" : "Messaging_Session_Id",
+      "description" : "Retrieve this from context variables. This is known as: Messaging Session Id, MessagingSessionId, or RoutableId",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Service_Appointment_ID" : {
+      "title" : "Service_Appointment_ID",
+      "description" : "This is the Id of the updated service appointment",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

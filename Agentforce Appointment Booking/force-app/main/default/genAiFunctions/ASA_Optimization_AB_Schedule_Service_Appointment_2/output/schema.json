@@ -1,0 +1,22 @@
+{
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "Scheduled_Details" : {
+      "title" : "Scheduled_Details",
+      "description" : "These are the details of the scheduling confirmation",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true
+    },
+    "Service_Appointment_Status" : {
+      "title" : "Service_Appointment_Status",
+      "description" : "This is the updated status confirming that the service appointment was scheduled",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

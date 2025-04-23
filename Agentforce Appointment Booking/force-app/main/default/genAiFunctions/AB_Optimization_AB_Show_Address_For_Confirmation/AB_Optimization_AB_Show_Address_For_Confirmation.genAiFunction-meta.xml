@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Once you receive the contactId and before creating a service appointment, show the address to the user and get their confirmation that this is the right address for the service appointment.</description>
+    <invocationTarget>AB_Optimization_AB_Show_Address_For_Confirmation</invocationTarget>
+    <invocationTargetType>flow</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+    <mappingAttributes>
+        <label>ContactID</label>
+        <name>input_ContactID</name>
+        <parameterName>ContactID</parameterName>
+        <parameterType>input</parameterType>
+    </mappingAttributes>
+    <masterLabel>ASA Optimization AB Show Address For Confirmation</masterLabel>
+</GenAiFunction>

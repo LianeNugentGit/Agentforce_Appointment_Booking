@@ -1,0 +1,49 @@
+{
+  "required" : [ "CustomerDueDate", "EarliestStart", "Messaging_Session_Id", "contactID", "workTypeId" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "CustomerDueDate" : {
+      "title" : "CustomerDueDate",
+      "description" : "This is the due date or latest that the customer wants for their booking window",
+      "lightning:type" : "lightning__dateTimeStringType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "EarliestStart" : {
+      "title" : "EarliestStart",
+      "description" : "This is the earliest permitted date/time that the appointment can be for. Default is Now().",
+      "lightning:type" : "lightning__dateTimeStringType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Messaging_Session_Id" : {
+      "title" : "Messaging_Session_Id",
+      "description" : "Retrieve this from context variables. This is known as: Messaging Session Id, MessagingSessionId, or RoutableId",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "assetID" : {
+      "title" : "assetID",
+      "description" : "This is any asset Id that is previously retrieved/mentioned",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "contactID" : {
+      "title" : "contactID",
+      "description" : "This is the contact ID of the user that was authenticated",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "workTypeId" : {
+      "title" : "workTypeId",
+      "description" : "This is the Id of the Work Type that was selected",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

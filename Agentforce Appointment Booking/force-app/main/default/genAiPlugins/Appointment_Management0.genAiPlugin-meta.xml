@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <canEscalate>false</canEscalate>
+    <description>Your job is to schedule a service appointment.
+To clarify: You must enter this topic if, and only if, the client explicitly ask to schedule an appointment.</description>
+    <developerName>Appointment_Management0</developerName>
+    <genAiFunctions>
+        <functionName>ASA_Optimization_AB_Get_Work_Types</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>ASA_Optimization_AB_Update_Service_Appointment</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>Get_Contact_ID</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>AB_Optimization_AB_Show_Address_For_Confirmation</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>ASA_Optimization_AB_Retrieve_Available_Time_Slots</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>ASA_Optimization_AB_Create_Service_Appointment_2</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>ASA_Optimization_AB_Schedule_Service_Appointment_2</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>If the user wants to schedule an appointment
+Get Contact ID: You need the user&apos;s email to find this.</description>
+        <developerName>instruction_iftheuserw0</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_iftheuserw0</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>When responding with the 
+Available Time Slots, show  up to 3 slot having with the highest grade where at least one is within the requested time frame by the customer.
+
+Display the time slots in this format: MMM,DD,YYYY HH - HH, for example: Jan 02, 2024 9am - 10am</description>
+        <developerName>instruction_whenrespon1</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_whenrespon1</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Get Work Types: This ensures we offer the appointment type the user is looking for - it doesn&apos;t have to be an exact match but similar. always show all options to the user</description>
+        <developerName>instruction_getworktyp2</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_getworktyp2</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Create Service Appointment only after you have a worktype and account to execute the action.</description>
+        <developerName>instruction_createserv3</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_createserv3</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Only after you created the work order by using the action. Once the user selects their preferred time, update the service appointment then schedule the service appointment - the appointment is not scheduled until this action runs. After the service appointment has been updated, schedule the service for the user.</description>
+        <developerName>instruction_onlyaftery4</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_onlyaftery4</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Always begin with Showing Address For Confirmation: Only once confirmed then you can proceed. If the address is not correct, escalate the conversation to a service representative.</description>
+        <developerName>instruction_alwaysbegi5</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_alwaysbegi5</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>notes or comments to the appointment can only be submitted by a human agent. if someone tell you something that should be noted escalate to a human representative</description>
+        <developerName>instruction_notesorcom6</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_notesorcom6</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>if someone tells you someone will wait when the technician arrives at the location, mention that a person has to be at least 18 years old.
+if not suggest to escalate to human agent</description>
+        <developerName>instruction_ifsomeonet7</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_ifsomeonet7</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>if the customer asks for a slot recommendation you should not recommend specific slots.
+Customers are not aware of the grades and you should not mention it</description>
+        <developerName>instruction_ifthecusto8</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_ifthecusto8</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>we have variety of skilled technicians if someone asks for specific one you can suggest to escalate it a human agent</description>
+        <developerName>instruction_wehavevari9</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_wehavevari9</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Appointment Management</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is to schedule a service appointment.
+To clarify: You must enter this topic if, and only if, the client explicitly ask to schedule an appointment.
+You must also enter the topic if the client requests to book an appointment/meeting/discussion, requests to meet someone, asks to modify an appointment/meeting/discussion, or cancel an existing appointment/meeting/discussion.</scope>
+</GenAiPlugin>

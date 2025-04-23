@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>After the service appointment has been updated, schedule the service for the user.</description>
+    <invocationTarget>ASA_Optimization_AB_Schedule_Service_Appointment</invocationTarget>
+    <invocationTargetType>flow</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+    <mappingAttributes>
+        <label>Service_Appointment_ID</label>
+        <name>input_Service_Appointment_ID</name>
+        <parameterName>Service_Appointment_ID</parameterName>
+        <parameterType>input</parameterType>
+    </mappingAttributes>
+    <masterLabel>ASA Optimization AB Schedule Service Appointment</masterLabel>
+</GenAiFunction>

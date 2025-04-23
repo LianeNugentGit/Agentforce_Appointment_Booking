@@ -1,0 +1,28 @@
+{
+  "required" : [ "SelectedArrivalWindowEnd", "SelectedArrivalWindowStart", "Service_Appointment_ID" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "SelectedArrivalWindowEnd" : {
+      "title" : "SelectedArrivalWindowEnd",
+      "description" : "This is the user's selected end time",
+      "lightning:type" : "lightning__dateTimeStringType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "SelectedArrivalWindowStart" : {
+      "title" : "SelectedArrivalWindowStart",
+      "description" : "This is the user's selected start time",
+      "lightning:type" : "lightning__dateTimeStringType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Service_Appointment_ID" : {
+      "title" : "Service_Appointment_ID",
+      "description" : "This is the created Service_Appointment_ID",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

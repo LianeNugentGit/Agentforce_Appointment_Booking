@@ -1,0 +1,14 @@
+{
+  "required" : [ "Service_Appointment_ID" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "Service_Appointment_ID" : {
+      "title" : "Service_Appointment_ID",
+      "description" : "This is the created Service_Appointment_ID",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

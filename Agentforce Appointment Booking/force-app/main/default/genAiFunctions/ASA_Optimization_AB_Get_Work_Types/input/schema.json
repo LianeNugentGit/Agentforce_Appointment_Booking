@@ -1,0 +1,14 @@
+{
+  "required" : [ "Requested_Service" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "Requested_Service" : {
+      "title" : "Requested_Service",
+      "description" : "This is the requested type of service that the user is looking for",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

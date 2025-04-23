@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Schedule_Service_Appointment</name>
+        <label>Schedule Service Appointment</label>
+        <locationX>176</locationX>
+        <locationY>242</locationY>
+        <actionName>FieldServiceScheduleAppointment</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>Scheduling_Result</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>schedulingPolicyId</name>
+            <value>
+                <elementReference>get_scheduling_policy.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>serviceAppointmentId</name>
+            <value>
+                <elementReference>Service_Appointment_ID</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>FieldServiceScheduleAppointment</nameSegment>
+        <offset>0</offset>
+        <outputParameters>
+            <assignToReference>Scheduled_Details</assignToReference>
+            <name>output</name>
+        </outputParameters>
+    </actionCalls>
+    <apiVersion>62.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>Scheduling_Result</name>
+        <label>Scheduling Result</label>
+        <locationX>176</locationX>
+        <locationY>350</locationY>
+        <defaultConnector>
+            <targetReference>Success_Update_AB_Agent_Metric</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Error</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Scheduled_Details</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Error</stringValue>
+                </rightValue>
+            </conditions>
+            <label>Error</label>
+        </rules>
+    </decisions>
+    <description>After the service appointment has been updated, schedule the service for the user.</description>
+    <environments>Default</environments>
+    <interviewLabel>ASA Optimization AB Schedule Service Appointment {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>ASA Optimization AB Schedule Service Appointment</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>get_scheduling_policy</name>
+        <label>get scheduling policy</label>
+        <locationX>176</locationX>
+        <locationY>134</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Schedule_Service_Appointment</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Customer First</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>FSL__Scheduling_Policy__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Success_Update_AB_Agent_Metric</name>
+        <label>Success: Update AB Agent Metric</label>
+        <locationX>308</locationX>
+        <locationY>458</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Messaging_Session_Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Schedule_Success__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <object>AB_Agent_Metric__c</object>
+    </recordUpdates>
+    <runInMode>SystemModeWithoutSharing</runInMode>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>get_scheduling_policy</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>Retrieve this from context variables. This is known as: Messaging Session Id, MessagingSessionId, or RoutableId</description>
+        <name>Messaging_Session_Id</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>These are the details of the scheduling confirmation</description>
+        <name>Scheduled_Details</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <description>This is the Id of the updated service appointment</description>
+        <name>Service_Appointment_ID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>This is the updated status confirming that the service appointment was scheduled</description>
+        <name>Service_Appointment_Status</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>
